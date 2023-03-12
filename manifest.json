@@ -1,0 +1,25 @@
+{
+  "manifest_version": 3,
+  "name": "ctvc",
+  "version": "1.0",
+  "description": "Monitor version controlled activities",
+
+    "icons": {
+    "16": "images/mark-red.png",
+    "32": "images/mark-red.png",
+    "48": "images/mark-red.png",
+    "128": "images/mark-red.png"
+  },
+  "content_scripts": [
+    {
+      "js": [
+        "scripts/content.js"
+      ],
+      "matches": [
+        "https://www.charlestyrwhitt.com/*",
+        "https://www.ctdevweb.com/*",
+        "*://www.staging.ctshirts.com/*"
+      ]
+    }
+  ]
+}
