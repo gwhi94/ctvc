@@ -1,25 +1,42 @@
 {
   "manifest_version": 3,
-  "name": "ctvc",
+  "name": "CT-Utility",
   "version": "1.0",
   "description": "Monitor version controlled activities",
-
-    "icons": {
+  "icons": {
     "16": "images/mark-red.png",
     "32": "images/mark-red.png",
     "48": "images/mark-red.png",
     "128": "images/mark-red.png"
   },
+  "action": {
+    "default_popup": "/templates/context.html"
+  },
+
   "content_scripts": [
     {
-      "js": [
-        "scripts/content.js"
-      ],
       "matches": [
         "https://www.charlestyrwhitt.com/*",
         "https://www.ctdevweb.com/*",
         "*://www.staging.ctshirts.com/*"
+      ],
+      "css": [
+        "./templates/context.css"
+      ],
+      "js": [
+        "scripts/jquery.js",
+        "scripts/inject.js"
       ]
+    }
+  ],
+  "web_accessible_resources": [
+    {
+      "resources": ["content.js"],
+      "matches": [
+      "https://www.charlestyrwhitt.com/*",
+      "https://www.ctdevweb.com/*",
+      "*://www.staging.ctshirts.com/*"
+    ]
     }
   ]
 }

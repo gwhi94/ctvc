@@ -1,0 +1,92 @@
+<style>
+.ct-utility-container{
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    height: 100%;
+    width: 100%;
+}
+.ct-utility-context{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+.ct-utility-context a{
+    margin-bottom: 10px;
+}
+
+.ct-utility-context-blue{
+    background-color: #001F49;
+    color: #FFFFFF;
+    border-color: #001F49;
+    border-radius: 5px;
+}
+
+.ct-utility-context-red{
+    background-color: #F44336;
+    color: #FFFFFF;
+    border-color: #F44336;
+    border-radius: 5px;
+}
+
+.ct-utility-btn{
+    width: 12rem;
+    padding: 10px;
+    font-family: inherit;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: inherit;
+    font-weight: 600;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+.ct-utility-btn:hover {
+    transform:scale(0.98,0.98);
+    outline:1px solid white
+}
+
+.ct-utility-header{
+    margin-bottom: 5px;
+}
+.ct-utility-sub-header{
+    margin-top: 0;
+    text-align: center;
+    font-size: 1rem;
+    font-weight: 600;
+}
+
+.ct-utility-col-1{
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+}
+.ct-utility-col-2{
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+}
+</style>
+
+<h1 class="ct-utility-header">CT Utility</h1>
+<div class="ct-utility-container">    
+    <div class="ct-utility-col-1">
+        <p class="ct-utility-sub-header">Utilities</p>
+        <div class="ct-utility-context">
+            <a class="ct-utility-context-blue ct-utility-btn">Find Content Asset ID</a>
+            <a class="ct-utility-context-blue ct-utility-btn">Full Page Screenshot</a>
+            <a class="ct-utility-context-blue ct-utility-btn">Check Missing Alt Tags</a>
+            <a class="ct-utility-context-red ct-utility-btn">Clear Cache</a>
+            <a class="ct-utility-context-red ct-utility-btn">Exit QA</a>
+        </div>
+    </div>
+
+    <div class="ct-utility-col-2">
+        <p class="ct-utility-sub-header">Adobe Activities in Effect</p>
+        <div class="ct-utility-context ct-utility-adobe-exps-container">
+            
+        </div>
+    </div> 
+</div>

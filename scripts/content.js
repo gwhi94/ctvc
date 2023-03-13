@@ -1,18 +1,25 @@
-const loadObject = window.ttMETA;
+var ctUtility = {
+    retrieveAdobeExps: function () {
+        const loadObject = window.ttMETA;
+        console.log('LOAD OBJ', loadObject);
+        if (loadObject) {
+            let loadObjectLength = loadObject.length;
 
-console.log(loadObject);
+            for (let i = 0; i < loadObjectLength; i++) {
+                $('.ct-utility-adobe-exps-container').append(`
+                <p>`+ loadObject[i].CampaignName + `</p>
+                <small>`+ loadObject[i].RecipeName + `</small>           
+                `);
+            }
 
-if(loadObject){
-    let loadObjectLength = loadObject.length;
-    var vcArr = [];
-
-    console.log(loadObject);
-
-    for(let i = 0; i < loadObjectLength; i++){
-        if(loadObject[i].CampaignName.includes('VC')){
-            vcArr.push(loadObject[i]);
         }
-    }
+    },
 
-    console.log('here', vcArr);
 }
+
+$(function () {
+    setTimeout(function () {
+        console.log('RUN');
+        ctUtility.retrieveAdobeExps();
+    }, 2000);
+})
